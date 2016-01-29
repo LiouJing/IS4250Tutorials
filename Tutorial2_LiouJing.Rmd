@@ -1,0 +1,27 @@
+---
+title: "Tutorial2"
+author: "Liou Jing"
+date: "29 January 2016"
+output: html_document
+---
+
+# 1(a)(i) To get the mean of the WaitTime
+summarise(labs, ans = mean(WaitTime, na.rm = TRUE))
+
+# Count the number of Yes and No for service satisfaction 
+count(labs, SvcSat)
+
+# 1(a)(ii) Plot the graph for WaitTime
+qplot(data=labs, x=WaitTime)
+
+# Plot the graph for Service Satisfaction
+qplot(data=labs, x=SvcSat)
+
+# 1(b)
+# Service Sat vs Age
+plot(labs$SvcSat,labs$AGE)
+#From this, you can see that most of the Ys come from the younger people, while most of the Ns come from the older people.
+
+# Service Sat vs Gender 
+plot(labs$SvcSat,labs$Gender)
+# From this, you can tell that although both females and males are mostly happy with the service, the females are happier compared to males, as there are more Ys for females.
