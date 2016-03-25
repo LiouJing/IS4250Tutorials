@@ -9,6 +9,7 @@ library(ggplot2)
 library(dplyr)
 qplot(x = speed, y = dist, data = cars, geom = "point")
 dplyr::filter(cars, speed < 5)
+
 ```{r}
 library(ggplot2)
 library(dplyr)
